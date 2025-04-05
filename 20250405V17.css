@@ -1,0 +1,106 @@
+.tarif-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  text-align: left;
+}
+
+.tarif-table th {
+  background-color: #e7f4e3;
+  font-weight: bold;
+  padding: 12px 8px;
+}
+
+.tarif-table td {
+  padding: 10px 8px;
+  border-bottom: 1px solid #eee;
+  font-weight: normal;
+}
+
+@media (max-width: 768px) {
+  .tarif-table {
+    display: block;
+  }
+
+  .tarif-table thead {
+    display: none;
+  }
+
+  .tarif-table tbody tr {
+    display: block;
+    margin-bottom: 20px;
+    border: none;
+    padding-bottom: 0;
+  }
+
+  .tarif-table td {
+    display: block;
+    border: none;
+    padding: 3px 0;
+  }
+
+  .tarif-table td.label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .tarif-table td.label span {
+    font-weight: bold;
+  }
+
+  .tarif-table td:has(span.mobile-info) {
+    margin-left: 10px;
+  }
+
+  .tarif-table td small {
+    font-size: 13px;
+  }
+
+  .tarif-table td strong {
+    display: inline-block;
+    margin-right: 6px;
+  }
+
+  .tarif-table td .underlined {
+    text-decoration: underline;
+  }
+
+  .tarif-table .row-abo-child td:not(.label),
+  .tarif-table .row-abo-adult td:not(.label) {
+    display: none;
+  }
+
+  .tarif-table .row-abo-child td.label::after {
+    content: '1 jaar geldig';
+    display: block;
+    text-decoration: underline;
+    font-weight: normal;
+    margin-top: 2px;
+    margin-left: 2px;
+  }
+
+  .tarif-table .row-abo-child td.label::before {
+    content: '';
+  }
+
+  .tarif-table .row-abo-child td.label + td {
+    display: inline-block;
+  }
+
+  .tarif-table .row-abo-adult td.label::after {
+    content: '1 jaar geldig';
+    display: block;
+    text-decoration: underline;
+    font-weight: normal;
+    margin-top: 2px;
+    margin-left: 2px;
+  }
+
+  .tarif-table .row-abo-adult td.label + td {
+    display: inline-block;
+  }
+}
