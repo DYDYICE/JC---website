@@ -1,0 +1,74 @@
+.tarif-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  text-align: left;
+}
+
+.tarif-table th {
+  background-color: #e7f4e3;
+  font-weight: bold;
+  padding: 12px 8px;
+}
+
+.tarif-table td {
+  padding: 10px 8px;
+  border-bottom: 1px solid #eee;
+  font-weight: normal;
+}
+
+/* Desktop dikke lijnen */
+@media screen and (min-width: 768px) {
+  .tarif-table .row-combi td,
+  .tarif-table .row-abo-adult td {
+    border-bottom: 2px solid #444;
+  }
+}
+
+/* Mobile: geen lijnen */
+@media screen and (max-width: 767px) {
+  .tarif-table td {
+    border-bottom: none;
+    display: block;
+  }
+
+  .tarif-table tr {
+    margin-bottom: 16px;
+    display: block;
+  }
+
+  .tarif-table .col-tarif {
+    display: none;
+  }
+
+  .tarif-table td.label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  .tarif-table td::before {
+    display: inline;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
+  .row-90 td:nth-child(2)::before { content: "Ticket met datum "; }
+  .row-90 td:nth-child(3)::before { content: "Flex-ticket "; }
+  .row-child td:nth-child(2)::before { content: "Ticket met datum "; }
+  .row-child td:nth-child(3)::before { content: "Flex-ticket "; }
+  .row-adult td:nth-child(2)::before { content: "Ticket met datum "; }
+  .row-adult td:nth-child(3)::before { content: "Flex-ticket "; }
+  .row-goolfy td:nth-child(2)::before { content: "Ticket met datum "; }
+  .row-goolfy td:nth-child(3)::before { content: "Flex-ticket "; }
+  .row-combi td:nth-child(2)::before { content: "Ticket met datum "; }
+  .row-combi td:nth-child(3)::before { content: "Flex-ticket "; }
+  .row-anniv td:nth-child(2)::before { content: "Ticket met datum "; }
+
+  /* Abonnementen mobile: override tekst */
+  .row-abo-child td:nth-child(2)::before { content: "1 jaar geldig "; }
+  .row-abo-child td:nth-child(3)::before { content: ""; }
+  .row-abo-adult td:nth-child(2)::before { content: "1 jaar geldig "; }
+  .row-abo-adult td:nth-child(3)::before { content: ""; }
+}
