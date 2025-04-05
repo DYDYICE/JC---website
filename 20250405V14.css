@@ -1,0 +1,89 @@
+.tarif-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  text-align: left;
+}
+
+.tarif-table th {
+  background-color: #e7f4e3;
+  font-weight: bold;
+  padding: 12px 8px;
+}
+
+.tarif-table td {
+  padding: 10px 8px;
+  border-bottom: 1px solid #eee;
+  font-weight: normal;
+}
+
+.tarif-table .label {
+  font-weight: bold;
+}
+
+.tarif-table .price {
+  margin-left: 10px;
+  font-weight: normal;
+}
+
+.tarif-table .billet-date,
+.tarif-table .billet-flex {
+  text-decoration: underline;
+  font-weight: normal;
+}
+
+.tarif-table .thick-line td {
+  border-bottom: 2px solid #888;
+}
+
+/* MOBILE LAYOUT */
+@media screen and (max-width: 768px) {
+  .tarif-table thead {
+    display: none;
+  }
+
+  .tarif-table tr {
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  .tarif-table td {
+    display: block;
+    width: 100%;
+    border: none;
+    padding: 4px 8px;
+  }
+
+  .tarif-table .label {
+    font-weight: bold;
+    padding-top: 10px;
+  }
+
+  .tarif-table .mobile-block {
+    padding-left: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .tarif-table .row-abo-child .billet-flex,
+  .tarif-table .row-abo-adult .billet-flex {
+    display: none;
+  }
+
+  .tarif-table .row-abo-child .price,
+  .tarif-table .row-abo-adult .price {
+    font-weight: normal;
+  }
+
+  .tarif-table .row-abo-child .billet-date,
+  .tarif-table .row-abo-adult .billet-date {
+    text-decoration: underline;
+  }
+
+  .tarif-table .thick-line td {
+    border-bottom: 2px solid #aaa;
+    margin-top: 6px;
+  }
+}
