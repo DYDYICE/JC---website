@@ -1,0 +1,94 @@
+.tarif-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  text-align: left;
+}
+
+.tarif-table th {
+  background-color: #e7f4e3;
+  font-weight: bold;
+  padding: 12px 8px;
+}
+
+.tarif-table td {
+  padding: 10px 8px;
+  border-bottom: 1px solid #eee;
+  font-weight: normal;
+}
+
+.tarif-table tr.thick-row td {
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 14px;
+}
+
+/* Desktop only (hide mobile rows) */
+@media screen and (min-width: 768px) {
+  .mobile-hide {
+    display: table-cell !important;
+  }
+  .desktop-only {
+    display: table-row !important;
+  }
+}
+
+/* Mobile styles */
+@media screen and (max-width: 767px) {
+  .tarif-table thead {
+    display: none;
+  }
+
+  .tarif-table, 
+  .tarif-table tbody, 
+  .tarif-table tr, 
+  .tarif-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .tarif-table tr {
+    margin-bottom: 20px;
+    border-bottom: 2px solid #eee;
+  }
+
+  .tarif-table td {
+    padding: 6px 10px;
+    border: none;
+  }
+
+  .tarif-table td.label {
+    font-weight: bold;
+    color: #2a4d1d;
+  }
+
+  .tarif-table td.label::before {
+    content: attr(data-emoji);
+    margin-right: 6px;
+  }
+
+  .tarif-table tr .mobile-hide {
+    display: none !important;
+  }
+
+  .tarif-table tr td:nth-of-type(2)::before {
+    content: "Billets datés";
+    text-decoration: underline;
+    display: inline-block;
+    margin-right: 10px;
+    font-weight: normal;
+  }
+
+  .tarif-table tr td:nth-of-type(3)::before {
+    content: "Billets flex (valable un an)";
+    text-decoration: underline;
+    display: inline-block;
+    margin-right: 10px;
+    font-weight: normal;
+  }
+
+  .tarif-table tr.row-anniv td:nth-of-type(3)::before {
+    content: "";
+    display: none;
+  }
+}
