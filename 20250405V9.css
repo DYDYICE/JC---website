@@ -1,0 +1,64 @@
+.tarif-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  text-align: left;
+}
+
+.tarif-table th {
+  background-color: #e7f4e3;
+  font-weight: bold;
+  padding: 12px 8px;
+}
+
+.tarif-table td {
+  padding: 10px 8px;
+  border-bottom: 1px solid #eee;
+  font-weight: normal;
+}
+
+@media (max-width: 768px) {
+  .tarif-table thead {
+    display: none;
+  }
+
+  .tarif-table, .tarif-table tbody, .tarif-table tr, .tarif-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .tarif-table tr {
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ccc;
+  }
+
+  .tarif-table td {
+    text-align: right;
+    position: relative;
+    padding-left: 50%;
+    border: none;
+  }
+
+  .tarif-table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 8px;
+    width: 45%;
+    padding-right: 10px;
+    text-align: left;
+    font-weight: normal;
+    text-decoration: underline;
+  }
+
+  /* Productnaam in bold */
+  .tarif-table td.product-label {
+    font-weight: bold;
+    text-align: left;
+    padding-left: 8px;
+  }
+
+  .tarif-table td.product-label::before {
+    content: none;
+  }
+}
