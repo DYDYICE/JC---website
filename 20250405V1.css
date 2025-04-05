@@ -1,0 +1,40 @@
+.tarif-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  margin-top: 30px;
+  color: #1d361b;
+}
+
+.tarif-table th {
+  background: #e5f2e3;
+  text-align: center;
+  padding: 16px;
+  font-size: 20px;
+  border: 1px solid #cce0cc;
+}
+
+.tarif-table th span {
+  font-size: 14px;
+  display: block;
+  color: #4a6749;
+  margin-top: 5px;
+}
+
+.tarif-table td {
+  border: 1px solid #e0e0e0;
+  padding: 14px 12px;
+  text-align: center;
+}
+
+.tarif-table td:first-child {
+  text-align: left;
+  font-weight: 600;
+  color: #222;
+}
+
+.tarif-table .note {
+  font-size: 12px;
+  color: #666;
+}
