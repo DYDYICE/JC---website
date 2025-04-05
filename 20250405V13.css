@@ -1,0 +1,71 @@
+.tarif-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  text-align: left;
+}
+
+.tarif-table th {
+  background-color: #e7f4e3;
+  font-weight: bold;
+  padding: 12px 8px;
+}
+
+.tarif-table td {
+  padding: 10px 8px;
+  border-bottom: 1px solid #eee;
+  font-weight: normal;
+}
+
+.tarif-table tr.thick-row td {
+  border-bottom: 2px solid #999;
+  padding-bottom: 14px;
+}
+
+@media screen and (max-width: 768px) {
+  .tarif-table {
+    font-size: 15px;
+  }
+
+  .tarif-table thead {
+    display: none;
+  }
+
+  .tarif-table tbody tr {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 22px;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .tarif-table td {
+    border: none;
+    display: block;
+    padding: 4px 12px;
+  }
+
+  .tarif-table td:first-child {
+    font-weight: bold;
+    padding-top: 8px;
+  }
+
+  .tarif-table td:nth-child(2)::before {
+    content: "Billet daté (en ligne uniquement)";
+    display: block;
+    text-decoration: underline;
+    font-weight: normal;
+    font-size: 14px;
+    margin-bottom: 2px;
+  }
+
+  .tarif-table tr .label-abo-child + td::before,
+  .tarif-table tr .label-abo-adult + td::before {
+    content: ""; /* Geen label bij abonnement */
+  }
+
+  .tarif-table td:nth-child(3)::before {
+    content: "";
+    display: none;
+  }
+}
