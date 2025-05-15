@@ -1,0 +1,48 @@
+/* Icon fix for both desktop & mobile */
+.info-height-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.icon-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 60px;
+  max-width: 80px;
+  font-size: 14px;
+  color: #333;
+  text-align: center;
+}
+
+.icon-height {
+  height: 128px;
+  width: auto;
+  display: block;
+  margin: 0 auto 6px;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .snelmenu {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .a-item {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+
+  .attractie-title {
+    font-size: 16px;
+  }
+
+  /* ⬇ Optional: slightly smaller icons on mobile */
+  .icon-height {
+    height: 96px;
+  }
+}
