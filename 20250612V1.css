@@ -1,0 +1,230 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f8f8f8;
+  margin: 0;
+  padding: 0;
+}
+
+.attraction-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.attraction-card {
+  width: 280px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background: #fff;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.attraction-card:hover {
+  transform: scale(1.02);
+}
+
+.attraction-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.attraction-content {
+  padding: 15px;
+  text-align: center;
+}
+
+.attraction-content strong {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.accessibility-wrapper {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.access-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.access-icon .emoji {
+  font-size: 24px;
+  margin-bottom: 2px;
+}
+
+.access-icon span:last-child {
+  font-size: 13px;
+}
+
+.max-limits {
+  font-size: 12px;
+  color: #555;
+  margin-top: 6px;
+  width: 100%;
+  text-align: center;
+}
+
+#scrollToTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+#scrollToTopBtn:hover {
+  background: #388e3c;
+}
+
+#animalsMenu {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  z-index: 9998;
+  background: #fff;
+  border: 2px solid #4CAF50;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  overflow: hidden;
+}
+
+#animalsMenu a {
+  display: block;
+  padding: 10px 14px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #333;
+  background: white;
+  border-bottom: 1px solid #eee;
+}
+
+#animalsMenu a:hover {
+  background: #f1f1f1;
+}
+
+#stickyMenu.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  z-index: 999;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Modal Styles */
+#modal {
+  display: none;
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px;
+  width: 90%;
+  position: relative;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+}
+
+#modal img {
+  max-width: 100%;
+  max-height: 70vh;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+.close {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Mobile layout adjustments */
+@media (max-width: 768px) {
+  .accessibility-wrapper {
+    flex-direction: column;
+    gap: 4px;
+  }
+  
+  .badge-new {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: red;
+  color: white;
+  padding: 3px 8px;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+.attraction-card {
+  position: relative;
+}
+
+
+  .access-icon {
+    flex-direction: row;
+    justify-content: center;
+    gap: 6px;
+  }
+
+  .access-icon .emoji {
+    font-size: 20px;
+    margin: 0;
+  }
+
+  .access-icon span:last-child {
+    font-size: 14px;
+  }
+
+  .modal-content {
+    width: 95%;
+  }
+
+  #animalsMenu {
+    bottom: 120px !important;
+    right: 20px;
+  }
+}
