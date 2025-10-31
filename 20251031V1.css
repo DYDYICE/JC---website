@@ -1,0 +1,251 @@
+/* ==========================================================
+   JUNGLE EXPEDITION — Scoped Styles (FR)
+   Safe for WYSIWYG CMS (emoji-free, namespaced)
+   ========================================================== */
+
+:root {
+  --je-teal: #00A9B5;
+  --je-teal-dark: #008F9B;
+  --je-deep: #00474D;
+  --je-yellow: #FFD24C;
+  --je-text: #ffffff;
+  --je-border: rgba(0, 0, 0, 0.12);
+}
+
+/* =================== GLOBAL WRAPPER =================== */
+.je-wrap {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--je-text);
+  background: linear-gradient(180deg, var(--je-deep), #0b2f34);
+  border-radius: 14px;
+  padding: 22px;
+  margin: 20px auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  max-width: 1100px;
+  text-align: left;
+}
+
+/* =================== TITLES =================== */
+.je-wrap h2.je-title {
+  margin: 0 0 12px;
+  text-align: center;
+  text-shadow: 2px 2px var(--je-deep);
+  font-size: 2rem;
+}
+.je-h3 {
+  color: var(--je-yellow);
+  text-align: center;
+  text-shadow: 2px 2px var(--je-deep);
+  margin-bottom: 12px;
+}
+
+/* =================== GRID =================== */
+.je-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  align-items: start;
+}
+
+/* =================== HORAIRES =================== */
+.je-horaires {
+  background: var(--je-teal);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.je-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 14px 0 18px;
+}
+
+.je-tab {
+  background: var(--je-teal-dark);
+  color: #fff;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: all 0.25s ease;
+}
+
+.je-tab:hover,
+.je-tab.je-active {
+  background: var(--je-yellow);
+  color: var(--je-deep);
+}
+
+.je-timeblock {
+  display: none;
+  animation: je-fadeIn 0.35s ease;
+}
+
+.je-timeblock.je-active {
+  display: block;
+}
+
+.je-jours {
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+.je-logo {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.je-logo img {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* =================== TARIFS =================== */
+.je-tarifs {
+  background: var(--je-deep);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.je-card {
+  background: var(--je-teal-dark);
+  border-radius: 10px;
+  padding: 16px;
+  margin: 12px 0;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.18);
+}
+
+.je-card-title {
+  margin: 0 0 4px;
+  color: var(--je-yellow);
+}
+
+.je-price {
+  font-weight: 800;
+  font-size: 2rem;
+  margin: 6px 0 10px;
+}
+
+.je-price span {
+  opacity: 0.9;
+  margin-right: 2px;
+}
+
+.je-list {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.je-list li {
+  margin: 6px 0;
+}
+
+.je-quick {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.je-btn {
+  background: var(--je-yellow);
+  color: var(--je-deep);
+  padding: 10px 14px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 800;
+}
+
+.je-btn:hover {
+  filter: brightness(1.05);
+}
+
+/* =================== BANNER =================== */
+.je-banner img {
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  display: block;
+  margin: 20px auto 0;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.je-banner img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* =================== FAQ =================== */
+.je-faq {
+  margin-top: 26px;
+}
+
+.je-faq h3 {
+  color: var(--je-yellow);
+  text-align: center;
+  text-shadow: 2px 2px var(--je-deep);
+}
+
+.je-qa {
+  background: var(--je-teal-dark);
+  border-radius: 10px;
+  margin: 10px 0;
+  padding: 14px;
+}
+
+.je-qa > summary {
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.je-qa div {
+  margin-top: 8px;
+}
+
+/* =================== GROUPES =================== */
+.je-groupes {
+  margin-top: 26px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  padding: 18px;
+}
+
+.je-groupes h4 {
+  margin: 12px 0 6px;
+}
+
+.je-groupes .je-contact a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* =================== ANIMATIONS =================== */
+@keyframes je-fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* =================== RESPONSIVE =================== */
+@media (max-width: 900px) {
+  .je-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .je-logo img {
+    max-width: 240px;
+  }
+  .je-wrap {
+    padding: 18px;
+  }
+}
